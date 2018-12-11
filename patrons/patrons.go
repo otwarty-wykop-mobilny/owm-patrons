@@ -43,6 +43,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(os.Stderr, "An error has occured fetching patrons.json contents", err.Error())
 		writeJSON(w, 500, J{
 			"message": "An error has occured fetching patrons.json contents",
+			"error":   err.Error(),
 		})
 		return
 	}
