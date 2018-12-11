@@ -7,11 +7,15 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/alufers/owm-patrons/common"
+
 	"github.com/google/go-github/v19/github"
 	"golang.org/x/oauth2"
 )
 
 type J map[string]interface{}
+
+var config = common.LoadConfig()
 
 func writeJSON(w http.ResponseWriter, code int, data interface{}) {
 	w.WriteHeader(code)
@@ -36,15 +40,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	tc := oauth2.NewClient(ctx, ts)
 
 	client := github.NewClient(tc)
-	// forkRepo, _, err := client.Repositories.Get(ctx, "otwarty-bot-pullujacy", "WykopMobilnyHybrid")
-	// if err != nil {
-	// 	fmt.Println("An error has occured when fetching the fork", err.Error())
-	// 	writeJSON(w, 500, J{
-	// 		"message": "An error has occured when fetching the fork",
-	// 	})
-	// 	return
-	// }
-	ref, _, err := client.Git.GetRef(ctx, "feelfreelinux", "WykopMobilnyHybrid", "heads/develop")
+	ref, _, err := client.Git.GetRef(ctx, config.RepoAuthor, config.RepoName, "heads/"+config.Branch)
 	if err != nil {
 		fmt.Println("An error has occured when fetching ref", err.Error())
 		writeJSON(w, 500, J{
@@ -52,7 +48,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-	_, _, err = client.Git.UpdateRef(ctx, "otwarty-bot-pullujacy", "WykopMobilnyHybrid", ref, true)
+	_, _, err = client.Git.UpdateRef(ctx, config.BotUsername, config.RepoName, ref, true)
 	if err != nil {
 		fmt.Println("An error has occured when updating ref", err.Error())
 		writeJSON(w, 500, J{
@@ -61,7 +57,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fileContent, _, _, err := client.Repositories.GetContents(ctx, "otwarty-bot-pullujacy", "WykopMobilnyHybrid", "patrons/patrons.json", &github.RepositoryContentGetOptions{
+	fileContent, _, _, err := client.Repositories.GetContents(ctx, config.BotUsername, config.RepoName, config.PatronsFilePath, &github.RepositoryContentGetOptions{
 		Ref: "develop",
 	})
 
@@ -98,7 +94,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	commitMessage := "ddd"
 	branch := "develop"
 	sha := fileContent.GetSHA()
-	_, _, err = client.Repositories.UpdateFile(ctx, "otwarty-bot-pullujacy", "WykopMobilnyHybrid", "patrons/patrons.json", &github.RepositoryContentFileOptions{
+	_, _, err = client.Repositories.UpdateFile(ctx, config.BotUsername, config.RepoName, config.PatronsFilePath, &github.RepositoryContentFileOptions{
 		// Author: &github.CommitAuthor{
 		// 	Name:  &commitName,
 		// 	Email: &commitEmail,
@@ -130,7 +126,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		Gdzie masz profil? Wyślę @alufers
 		> Co @alufers Kurwa dawaj kontrybucje
 	`
-	client.PullRequests.Create(ctx, "feelfreelinux", "WykopMobilnyHybrid", &github.NewPullRequest{
+	client.PullRequests.Create(ctx, config.RepoAuthor, config.RepoName, &github.NewPullRequest{
 		Title: &title,
 		Head:  &head,
 		Base:  &base,

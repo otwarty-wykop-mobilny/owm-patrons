@@ -1,4 +1,4 @@
-module github.com/feelfreelinux/WykopMobilnyHybrid/patrons
+module github.com/alufers/owm-patrons
 
 require (
 	github.com/google/go-github v17.0.0+incompatible
