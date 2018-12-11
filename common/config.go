@@ -17,7 +17,8 @@ type Config struct {
 
 var PopulatedConfig = &Config{
 	BotUsername:     "otwarty-bot-pullujacy",
-	RepoAuthor:      "owm-patrons",
+	RepoAuthor:      "alufers",
+	RepoName:        "owm-patrons",
 	Branch:          "master",
 	PatronsFilePath: "patrons.json",
 }
