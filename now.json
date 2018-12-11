@@ -1,8 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "patrons.json", "use": "@now/static" },
-    { "src": "*.go", "use": "@now/go" }
+  "builds": [{ "src": "*.go", "use": "@now/go" }],
+  "routes": [
+    { "src": "/patrons", "dest": "/patrons.go" },
+    { "src": "/new-patron", "dest": "/now_patron.go" }
   ],
   "env": {
     "GITHUB_API_KEY": "@github-api-key"
