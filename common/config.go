@@ -15,8 +15,15 @@ type Config struct {
 	PatronsFilePath string
 }
 
+var PopulatedConfig = &Config{
+	BotUsername:     "otwarty-bot-pullujacy",
+	RepoAuthor:      "owm-patrons",
+	Branch:          "master",
+	PatronsFilePath: "patrons.json",
+}
+
 // Loads the configuration from json, panics on error
-func LoadConfig() *Config {
+func LoadConfigJSON() *Config {
 	cfg := &Config{}
 	data, err := ioutil.ReadFile("config.json")
 	if err != nil {

@@ -15,7 +15,7 @@ import (
 
 type J map[string]interface{}
 
-var config = common.LoadConfig()
+var config = common.PopulatedConfig
 
 func writeJSON(w http.ResponseWriter, code int, data interface{}) {
 	w.WriteHeader(code)
