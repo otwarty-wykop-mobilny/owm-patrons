@@ -36,7 +36,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	client := github.NewClient(tc)
 
 	fileContent, _, _, err := client.Repositories.GetContents(ctx, config.RepoAuthor, config.RepoName, config.PatronsFilePath, &github.RepositoryContentGetOptions{
-		Ref: "develop",
+		Ref: config.Branch,
 	})
 
 	if err != nil {

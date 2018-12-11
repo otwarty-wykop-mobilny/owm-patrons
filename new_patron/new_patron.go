@@ -58,7 +58,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fileContent, _, _, err := client.Repositories.GetContents(ctx, config.BotUsername, config.RepoName, config.PatronsFilePath, &github.RepositoryContentGetOptions{
-		Ref: "develop",
+		Ref: config.Branch,
 	})
 
 	if err != nil {
@@ -92,7 +92,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	// commitName := "otwarty-bot-pullujacy"
 	// commitEmail := "ddd@bjorn.ml"
 	commitMessage := "ddd"
-	branch := "develop"
+	branch := config.Branch
 	sha := fileContent.GetSHA()
 	_, _, err = client.Repositories.UpdateFile(ctx, config.BotUsername, config.RepoName, config.PatronsFilePath, &github.RepositoryContentFileOptions{
 		// Author: &github.CommitAuthor{
@@ -112,8 +112,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	title := "Add new patrons"
-	head := "otwarty-bot-pullujacy:develop"
-	base := "develop"
+	head := "otwarty-bot-pullujacy:" + config.Branch
+	base := config.Branch
 	body := `
 		witam proszę mi zmergować tego pull requesta
 		zmerguj że tego pulla człowieku
