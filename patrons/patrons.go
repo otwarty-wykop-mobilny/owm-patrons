@@ -40,7 +40,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	})
 
 	if err != nil {
-		fmt.Println("An error has occured fetching patrons.json contents", err.Error())
+		fmt.Fprintln(os.Stderr, "An error has occured fetching patrons.json contents", err.Error())
 		writeJSON(w, 500, J{
 			"message": "An error has occured fetching patrons.json contents",
 		})
@@ -53,7 +53,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	patrons := J{}
 	err = json.Unmarshal([]byte(jsonData), &patrons)
 	if err != nil {
-		fmt.Println("Failed to parse patrons.json", err.Error())
+		fmt.Fprintln(os.Stderr, "Failed to parse patrons.json", err.Error())
 		writeJSON(w, 500, J{
 			"message": "Failed to parse patrons.json",
 		})
