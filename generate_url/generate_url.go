@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/base64"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 
@@ -14,6 +15,7 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
 	key, err := nacl.Load(os.Getenv("PRIVATE_KEY"))
 	if err != nil {
+		fmt.Println("Failed to create private key", err.Error())
 		common.WriteJSON(w, 500, "Failed to create private key")
 		return
 	}
