@@ -5,6 +5,9 @@ github.com/google/go-github/v19 v19.1.0 h1:EXbrEGEwc4zOSl/exLvlHW+y6hEbhI/En/w7l
 github.com/google/go-github/v19 v19.1.0/go.mod h1:GVHidlOJOqnOChZvI4HBBXoOaZ64OfJRoSoY6uo5BSI=
 github.com/google/go-querystring v1.0.0 h1:Xkwi/a1rcvNg1PPYe5vI8GbeBY/jrVuDX5ASuANWTrk=
 github.com/google/go-querystring v1.0.0/go.mod h1:odCYkC5MyYFN7vkCjXpyrEuKhc/BUO6wN/zVPAxq5ck=
+github.com/kevinburke/nacl v0.0.0-20180823191323-62f34ae0e055 h1:l/zKLyqIYSJ/DL+8cey9hsL5qP8X5SCcWAIbOal9P3g=
+github.com/kevinburke/nacl v0.0.0-20180823191323-62f34ae0e055/go.mod h1:VUp2yfq+wAk8hMl3NNN34fXjzUD9xMpGvUL8eSJz9Ns=
+golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac h1:7d7lG9fHOLdL6jZPtnV4LpI41SbohIJ1Atq7U991dMg=
 golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
 golang.org/x/net v0.0.0-20180826012351-8a410e7b638d/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
 golang.org/x/net v0.0.0-20181207154023-610586996380 h1:zPQexyRtNYBc7bcHmehl1dH6TB3qn8zytv8cBGLDNY0=

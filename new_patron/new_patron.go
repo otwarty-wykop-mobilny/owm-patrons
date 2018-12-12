@@ -13,22 +13,11 @@ import (
 	"golang.org/x/oauth2"
 )
 
-type J map[string]interface{}
-
 var config = common.PopulatedConfig
-
-func writeJSON(w http.ResponseWriter, code int, data interface{}) {
-	w.WriteHeader(code)
-	serialized, err := json.Marshal(data)
-	if err != nil {
-		serialized, _ = json.Marshal(err.Error())
-	}
-	w.Write(serialized)
-}
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
-		writeJSON(w, 400, J{
+		common.WriteJSON(w, 400, common.J{
 			"message": "This request must be a POST",
 		})
 		return
@@ -43,7 +32,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	ref, _, err := client.Git.GetRef(ctx, config.RepoAuthor, config.RepoName, "heads/"+config.Branch)
 	if err != nil {
 		fmt.Println("An error has occured when fetching ref", err.Error())
-		writeJSON(w, 500, J{
+		common.WriteJSON(w, 500, common.J{
 			"message": "An error has occured when fetching ref",
 		})
 		return
@@ -51,7 +40,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	_, _, err = client.Git.UpdateRef(ctx, config.BotUsername, config.RepoName, ref, true)
 	if err != nil {
 		fmt.Println("An error has occured when updating ref", err.Error())
-		writeJSON(w, 500, J{
+		common.WriteJSON(w, 500, common.J{
 			"message": "An error has occured when updating ref",
 		})
 		return
@@ -63,7 +52,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		fmt.Println("An error has occured fetching patrons.json contents", err.Error())
-		writeJSON(w, 500, J{
+		common.WriteJSON(w, 500, common.J{
 			"message": "An error has occured fetching patrons.json contents",
 		})
 		return
@@ -72,17 +61,17 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-	patrons := J{}
+	patrons := common.J{}
 	err = json.Unmarshal([]byte(jsonData), &patrons)
 	if err != nil {
 		fmt.Println("Failed to parse patrons.json", err.Error())
-		writeJSON(w, 500, J{
+		common.WriteJSON(w, 500, common.J{
 			"message": "Failed to parse patrons.json",
 		})
 		return
 	}
 
-	patrons["patrons"] = append(patrons["patrons"].([]interface{}), J{
+	patrons["patrons"] = append(patrons["patrons"].([]interface{}), common.J{
 		"username": "rnickson",
 		"color":    "magenta",
 		"tier":     "socjalizm krul",
@@ -106,7 +95,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	})
 	if err != nil {
 		fmt.Println("Failed to write patrons.json", err.Error())
-		writeJSON(w, 500, J{
+		common.WriteJSON(w, 500, common.J{
 			"message": "Failed to write patrons.json",
 		})
 		return
@@ -132,7 +121,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		Base:  &base,
 		Body:  &body,
 	})
-	writeJSON(w, 200, J{
+	common.WriteJSON(w, 200, common.J{
 		"message": "Success!",
 		"data":    patrons,
 	})

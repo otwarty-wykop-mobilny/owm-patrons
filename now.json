@@ -10,7 +10,8 @@
     { "src": "/new-patron", "dest": "/new_patron/new_patron.go" }
   ],
   "env": {
-    "GITHUB_API_KEY": "@github-api-key"
+    "GITHUB_API_KEY": "@github-api-key",
+    "PRIVATE_KAY": "@private-key"
   },
   "regions": ["bru"]
 }
