@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "now-build": "mkdir -p dist && cp -r ./ /tmp/dddd && cp -r /tmp/dddd ./dist"
+        "now-build": "mkdir -p dist && cp -r ./ /tmp/dist && cp -r /tmp/dist ./"
     },
     "dependencies": {
         "bulma": "^0.7.2"
