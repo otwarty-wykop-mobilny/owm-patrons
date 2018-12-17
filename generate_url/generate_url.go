@@ -25,5 +25,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	base64Encoded := base64.StdEncoding.EncodeToString(encrypted)
 
-	common.WriteJSON(w, 200, &common.J{"url": os.Getenv("NOW_URL") + "/new-patron/" + base64Encoded})
+	common.WriteJSON(w, 200, &common.J{"url": r.Host + "/new-patron/" + base64Encoded})
 }
