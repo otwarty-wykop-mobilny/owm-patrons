@@ -1,5 +1,8 @@
 {
     "scripts": {
         "now-build": "mkdir -p dist && cp * dist"
-      }
+    },
+    "dependencies": {
+        "bulma": "^0.7.2"
+    }
 }
