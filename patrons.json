@@ -1,43 +1,22 @@
 {
-
   "patrons": [
-
     {
-
-      "badge": "Platynowy supporter",
-
-      "color": "pink",
-
-      "tier": "1zl",
-
-      "username": "alufers"
-
+      "username": "alufers",
+      "tier": "patron50",
+      "badge": {
+        "text": "ALU",
+        "color": "#E91E63"
+      },
+      "listMention": true
     },
-
     {
-
-      "badge": "Niewolnik",
-
-      "color": "yellow",
-
-      "tier": "darmowa praca",
-
-      "username": "Kroguc"
-
-    },
-
-    {
-
-      "badge": "lewak",
-
-      "color": "magenta",
-
-      "tier": "socjalizm krul",
-
-      "username": "rnickson"
-
+      "username": "feelfree",
+      "tier": "patron50",
+      "badge": {
+        "text": "FILIP",
+        "color": "#FF5722"
+      },
+      "listMention": true
     }
-
   ]
-
 }
