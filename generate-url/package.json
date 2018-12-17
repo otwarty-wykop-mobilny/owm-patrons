@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "now-build": "mkdir -p dist && cp -r ./ dist"
+        "now-build": "mkdir -p dist && find ./ ! -name dist -exec cp -t dist/ {} +"
     },
     "dependencies": {
         "bulma": "^0.7.2"
