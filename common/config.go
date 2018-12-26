@@ -13,6 +13,7 @@ type Config struct {
 	RepoName        string
 	Branch          string
 	PatronsFilePath string
+	TiersFilePath   string
 }
 
 var PopulatedConfig = &Config{
@@ -21,6 +22,7 @@ var PopulatedConfig = &Config{
 	RepoName:        "owm-patrons",
 	Branch:          "master",
 	PatronsFilePath: "patrons.json",
+	TiersFilePath:   "tiers.json",
 }
 
 // Loads the configuration from json, panics on error

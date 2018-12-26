@@ -9,6 +9,7 @@
 
   "routes": [
     { "src": "/api/patrons", "dest": "/api/patrons/patrons.go" },
+    { "src": "/api/tiers", "dest": "/api/patrons/tiers.go" },
     { "src": "/api/new-patron", "dest": "/api/new_patron/new_patron.go" },
     { "src": "/api/generate-url", "dest": "/api/generate_url/generate_url.go" }
   ],
