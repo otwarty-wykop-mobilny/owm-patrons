@@ -9,7 +9,7 @@ import (
 
 	"github.com/alufers/owm-patrons/common"
 
-	"github.com/google/go-github/v20/github"
+	"github.com/google/go-github/v21/github"
 	"golang.org/x/oauth2"
 )
 
