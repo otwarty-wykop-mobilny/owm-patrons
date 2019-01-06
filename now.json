@@ -18,5 +18,5 @@
     "PRIVATE_KEY": "@private-key"
   },
   "regions": ["bru"],
-  "alias": ["owm-patrons.now.sh"]
+  "alias": ["owm-patrons.now.sh", "patrons.grzywok.eu"]
 }
