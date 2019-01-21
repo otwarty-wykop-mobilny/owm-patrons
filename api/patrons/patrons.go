@@ -60,7 +60,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-
+	w.Headers().Add("Cache-Control", "s-maxage=3600, maxage=0")
 	writeJSON(w, 200, patrons)
 	//client.Repositories()
 }
