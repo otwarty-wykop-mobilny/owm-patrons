@@ -13,6 +13,7 @@ import (
 	"golang.org/x/oauth2"
 )
 
+//J stands for JSON
 type J map[string]interface{}
 
 var config = common.PopulatedConfig
