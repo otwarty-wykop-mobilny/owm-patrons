@@ -4,14 +4,16 @@
     { "src": "api/new_patron/new_patron.go", "use": "@now/go" },
     { "src": "api/patrons/patrons.go", "use": "@now/go" },
     { "src": "api/generate_url/generate_url.go", "use": "@now/go" },
-    { "src": "generate-url/package.json", "use": "@now/static-build" }
+    { "src": "generate-url/package.json", "use": "@now/static-build" },
+    { "src": "main-page/package.json", "use": "@now/static-build" }
   ],
 
   "routes": [
     { "src": "/api/patrons", "dest": "/api/patrons/patrons.go" },
     { "src": "/api/tiers", "dest": "/api/patrons/tiers.go" },
     { "src": "/api/new-patron", "dest": "/api/new_patron/new_patron.go" },
-    { "src": "/api/generate-url", "dest": "/api/generate_url/generate_url.go" }
+    { "src": "/api/generate-url", "dest": "/api/generate_url/generate_url.go" },
+    { "src": "/", "dest": "/main-page" }
   ],
   "env": {
     "GITHUB_API_KEY": "@github-api-key",

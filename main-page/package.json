@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "now-build": "mkdir -p dist && cp -r ./ /tmp/dist && cp -r /tmp/dist ./"
+    }
+}
