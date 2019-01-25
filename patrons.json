@@ -10,6 +10,15 @@
       "listMention": true
     },
     {
+      "username": "ashmedai",
+      "tier": "patron10",
+      "badge": {
+        "text": "PATRON",
+        "color": "#3c3c3c"
+      },
+      "listMention": true
+    },
+    {
       "username": "xdk7888",
       "tier": "patron5",
       "badge": {
