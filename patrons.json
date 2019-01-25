@@ -10,13 +10,31 @@
       "listMention": true
     },
     {
+      "username": "xdk7888",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
       "username": "feelfree",
       "tier": "patron50",
       "badge": {
-        "text": "TWÓRCA",
+        "text": "TWÓRCA OWM",
         "color": "#af133a"
       },
-      "listMention": true
+      "listMention": false
+    },
+    {
+      "username": "Kroguc",
+      "tier": "patron50",
+      "badge": {
+        "text": "TWÓRCA OWM",
+        "color": "#af133a"
+      },
+      "listMention": false
     }
   ]
 }
