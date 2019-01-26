@@ -1,6 +1,15 @@
 {
   "patrons": [
     {
+      "username": "airavandrel",
+      "tier": "patron25",
+      "badge": {
+        "text": "Nocny zwiadowca",
+        "color": "#c90000"
+      },
+      "listMention": true
+    },
+    {
       "username": "jakub3k12345",
       "tier": "patron5",
       "badge": {
