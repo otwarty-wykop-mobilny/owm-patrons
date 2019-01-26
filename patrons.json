@@ -28,6 +28,15 @@
       "listMention": true
     },
     {
+      "username": "meetom",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
       "username": "Chlewnia_z_choroszczy",
       "tier": "patron10",
       "badge": {
