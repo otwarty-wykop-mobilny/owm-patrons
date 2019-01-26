@@ -1,13 +1,58 @@
 {
   "patrons": [
     {
+      "username": "jakub3k12345",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
+      "username": "Kokos",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
+      "username": "Chlewnia_z_choroszczy",
+      "tier": "patron10",
+      "badge": {
+        "text": "PATRON",
+        "color": "#0d46c9"
+      },
+      "listMention": true
+    },
+    {
+      "username": "Chlewnia_z_choroszczy",
+      "tier": "patron10",
+      "badge": {
+        "text": "PATRON",
+        "color": "#0d46c9"
+      },
+      "listMention": true
+    },
+    {
+      "username": "kiernek",
+      "tier": "patron10",
+      "badge": {
+        "text": "PATRON",
+        "color": "#6a409b"
+      },
+      "listMention": true
+    },
+    {
       "username": "alufers",
       "tier": "patron50",
       "badge": {
         "text": "ALU",
         "color": "#E91E63"
       },
-      "listMention": true
+      "listMention": false
     },
     {
       "username": "ashmedai",
