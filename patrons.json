@@ -1,6 +1,15 @@
 {
   "patrons": [
     {
+      "username": "Pan_Qcek",
+      "tier": "patron50",
+      "badge": {
+        "text": "Patron",
+        "color": "#d7d334"
+      },
+      "listMention": true
+    },
+    {
       "username": "airavandrel",
       "tier": "patron25",
       "badge": {
