@@ -10,6 +10,15 @@
       "listMention": true
     },
     {
+      "username": "Krx_S",
+      "tier": "patron10",
+      "badge": {
+        "text": "Patron",
+        "color": "#95389e"
+      },
+      "listMention": true
+    },
+    {
       "username": "Manderigon",
       "tier": "patron25",
       "badge": {
