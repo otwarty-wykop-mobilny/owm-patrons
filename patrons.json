@@ -47,10 +47,10 @@
     },
     {
       "username": "kaitek666",
-      "tier": "patron5",
+      "tier": "patron10",
       "badge": {
         "text": "PATRON",
-        "color": "#919191"
+        "color": "#238b99"
       },
       "listMention": true
     },
