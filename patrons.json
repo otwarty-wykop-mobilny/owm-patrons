@@ -118,6 +118,15 @@
       "listMention": true
     },
     {
+      "username": "darvd29",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
       "username": "feelfree",
       "tier": "patron50",
       "badge": {
