@@ -37,6 +37,15 @@
       "listMention": true
     },
     {
+      "username": "Tomek_Tcz",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
       "username": "jakub3k12345",
       "tier": "patron5",
       "badge": {
@@ -87,6 +96,15 @@
       "badge": {
         "text": "PATRON",
         "color": "#6a409b"
+      },
+      "listMention": true
+    },
+    {
+      "username": "pawelek",
+      "tier": "patron10",
+      "badge": {
+        "text": "PATRON",
+        "color": "#12ef20"
       },
       "listMention": true
     },
