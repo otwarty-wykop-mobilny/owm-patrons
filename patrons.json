@@ -179,6 +179,15 @@
         "color": "#af133a"
       },
       "listMention": false
+    },
+    {
+      "username": "Bjornskjald",
+      "tier": "patron50",
+      "badge": {
+        "text": "Mikroblog Premium",
+        "color": "#3a80bc"
+      },
+      "listMention": false
     }
   ]
 }
