@@ -82,6 +82,15 @@
       "listMention": true
     },
     {
+  "username": "ParanoidBumblebee",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
+    {
       "username": "jakub3k12345",
       "tier": "patron5",
       "badge": {
