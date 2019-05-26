@@ -72,6 +72,15 @@
       },
       "listMention": true
     },
+        {
+      "username": "NERP",
+      "tier": "patron5",
+      "badge": {
+        "text": "PATRON",
+        "color": "#919191"
+      },
+      "listMention": true
+    },
     {
       "username": "Tomek_Tcz",
       "tier": "patron5",
