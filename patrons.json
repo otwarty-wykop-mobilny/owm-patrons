@@ -235,6 +235,15 @@
       "listMention": false
     },
     {
+      "username": "unweek",
+      "tier": "patron50",
+      "badge": {
+        "text": "Główny Pomocnik",
+        "color": "#2d918c"
+      },
+      "listMention": false
+    },
+    {
       "username": "Bjornskjald",
       "tier": "patron50",
       "badge": {
