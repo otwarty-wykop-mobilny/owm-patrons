@@ -100,6 +100,15 @@
       "listMention": true
     },
     {
+  "username": "aceXgod",
+      "tier": "patron25",
+      "badge": {
+        "text": "Tester",
+        "color": "#ff00d4"
+      },
+      "listMention": false
+    },
+    {
       "username": "jakub3k12345",
       "tier": "patron5",
       "badge": {
