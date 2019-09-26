@@ -9,6 +9,15 @@
       },
       "listMention": true
     },
+    {
+      "username": "fstab",
+      "tier": "patron5",
+      "badge": {
+        "text": "Patron",
+        "color": "#00c203"
+      },
+      "listMention": true
+    },
         {
       "username": "arcypatelniagrozy",
       "tier": "patron25",
