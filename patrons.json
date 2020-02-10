@@ -18,12 +18,30 @@
       },
       "listMention": true
     },
+    {
+      "username": "PapaStajl",
+      "tier": "patron5",
+      "badge": {
+        "text": "Patron",
+        "color": "#00c203"
+      },
+      "listMention": true
+    },
         {
       "username": "arcypatelniagrozy",
       "tier": "patron25",
       "badge": {
         "text": "Riccionchino",
         "color": "#9b1bb5"
+      },
+      "listMention": true
+    },
+        {
+      "username": "LaylaTichy",
+      "tier": "patron25",
+      "badge": {
+        "text": "send nudes",
+        "color": "#893d53"
       },
       "listMention": true
     },
