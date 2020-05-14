@@ -19,7 +19,25 @@
       "listMention": true
     },
     {
+      "username": "MiXereg",
+      "tier": "patron5",
+      "badge": {
+        "text": "Patron",
+        "color": "#00c203"
+      },
+      "listMention": true
+    },
+    {
       "username": "PapaStajl",
+      "tier": "patron5",
+      "badge": {
+        "text": "Patron",
+        "color": "#00c203"
+      },
+      "listMention": true
+    },
+     {
+      "username": "PanMieczyslaw",
       "tier": "patron5",
       "badge": {
         "text": "Patron",
@@ -45,6 +63,7 @@
       },
       "listMention": true
     },
+    
 {
       "username": "Theia",
       "tier": "patron25",
